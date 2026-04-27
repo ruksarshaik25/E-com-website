@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Shop</title>
+  <link rel="stylesheet" href="ecom.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN -->
+<div id="login" class="login">
+
+  <h1>Login 🔐</h1>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <p id="error"></p>
+</div>
+
+<!-- 🏠 HOME -->
+<div id="home" class="home hidden">
+  <h1>Welcome to ElectroHub 🛍️</h1>
+  <p>Best deals on electronics</p>
+  <button onclick="enterShop()">Enter Shop</button>
+</div>
+
+<!-- 🛒 SHOP -->
+<div id="shop" class="shop hidden">
+
+  <header>
+    <h2>Products</h2>
+    <button onclick="toggleCart()">
+      Cart (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <!-- SEARCH + FILTER -->
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
+
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="low">Below ₹10,000</option>
+      <option value="average">Above ₹10,000 and below ₹20,000  </option>
+      <option value="high">Above ₹20,000</option>
+    </select>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="products" id="product-list"></div>
+
+</div>
+
+<!-- 🛒 CART -->
+<div id="cart" class="cart">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+  <button onclick="clearCart()">Clear</button>
+  <button onclick="toggleCart()">Close</button>
+</div>
+
+<script src="ecom.js"></script>
+</body>
+</html>
