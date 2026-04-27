@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+/* LOGIN */
+.login {
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login input {
+  padding: 10px;
+  margin: 5px;
+}
+
+.login button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#error {
+  color: red;
+}
+
+/* HOME */
+.home {
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SHOP */
+header {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.controls {
+  margin: 10px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px;
+  margin: 5px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 150px;
+}
+
+/* CART */
+.cart {
+  position: fixed;
+  right: 10px;
+  top: 80px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
